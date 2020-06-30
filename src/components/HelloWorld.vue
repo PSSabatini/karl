@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    HELLO
+    <h1>HELLO</h1>
   </div>
 </template>
 
@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.hello {
+  color: $hempHazelnut;
+}
 </style>

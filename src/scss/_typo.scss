@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    text-rendering: optimizeLegibility;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bungee', cursive;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 46px;
+}
+
+h4 {
+    font-size: 34px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+.navigation, 
+.xl,
+.text,
+.small,
+.xs,
+.link {
+    font-family: 'Lato', sans-serif;
+}
+
+.navigation {
+    font-size: 16px;
+}
+
+.xl {
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.small {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.xs {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.link {
+    font-size: 16px;
+    font-weight: 700;
+}
