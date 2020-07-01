@@ -3,6 +3,7 @@
 
 :root {
     text-rendering: optimizeLegibility;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -29,46 +30,14 @@ h3 {
 
 h4 {
     font-size: 34px;
+    margin: 0;
+    line-height: 38px;
 }
 
 h5 {
     font-size: 24px;
 }
 
-.navigation, 
-.xl,
-.text,
-.small,
-.xs,
-.link {
-    font-family: 'Lato', sans-serif;
-}
-
-.navigation {
-    font-size: 16px;
-}
-
-.xl {
-    font-size: 34px;
-    font-weight: 300;
-}
-
-.text {
-    font-size: 24px;
-    font-weight: 300;
-}
-
-.small {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.xs {
-    font-size: 14px;
-    font-weight: 300;
-}
-
-.link {
-    font-size: 16px;
-    font-weight: 700;
+p {
+    margin: 0;
 }
