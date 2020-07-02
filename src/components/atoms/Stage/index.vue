@@ -29,6 +29,8 @@ export default {
 <style lang="scss">
 .stage {
   width: 100%;
+  height: 100%;
+  position: fixed;
 
   .stage-background {
   position: relative;
@@ -77,6 +79,7 @@ export default {
         font-size: 34px;
         font-weight: 700;
         line-height: 38px;
+        text-transform: uppercase;
 
         p:first-child {
           color: $hempHazelnut;
