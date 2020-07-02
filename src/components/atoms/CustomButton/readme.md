@@ -11,10 +11,10 @@ Available color classes:
 
 ## Usage Template
 ```html
-    <button class="custom-button [color] [--invert]" [disabled]>[label]</button>
+    <button class="custom-button [color] [--invert] [--border]" [disabled]>[label]</button>
 ```
 
 ## Usage Vue
 ```html
-    <custom-button :color="color" :invert="--invert" :label="label" :disabled="disabled"></custom-button>
+    <custom-button :color="color" :invert="--invert" :border="--border" :label="label" :disabled="disabled"></custom-button>
 ```

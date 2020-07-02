@@ -3,11 +3,17 @@ import { storiesOf } from '@storybook/vue';
 // required Knobs interfaces
 import { text, boolean, radios } from '@storybook/addon-knobs';
 // this module
-import CustomButton from './index.vue';
+import ButtonWithIcon from './index.vue';
 // module readme
 import readme from './readme.md';
 
 let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+
+const iconOptions = {
+  'Apple Pay': 'applepay',
+  'Add Cart': 'cart-plus',
+  'Arrow Left': 'chevron_left',
+};
 
 const colorOptions = {
   Neutral: 'neutral',
@@ -18,40 +24,35 @@ const colorOptions = {
   Orange: 'orange',
 };
 
-const invertOptions = {
-  invert: '--invert',
-  Dont_Invert: '',
+const position = {
+  left: 'left',
+  right: 'right',
 };
 
-const borderOptions = {
-  with_border: '--border',
-  without_border: '',
-};
-
-storiesOf('atoms/CustomButton', module)
+storiesOf('molecules/ButtonWithIcon', module)
   .add('default', () => ({
-    components: { CustomButton },
+    components: { ButtonWithIcon },
     props: {
       label: {
-        default: text('Label', 'button'),
+        default: text('Label', 'Express Checkout'),
       },
-      invert: {
-        default: radios('Invert', invertOptions, ''),
+      icons: {
+        default: radios('Icon', iconOptions, 'applepay'),
       },
-      border: {
-        default: radios('Border', borderOptions, ''),
-      },
-      disabled: {
-        default: boolean('Disabled', false),
+      position: {
+        default: radios('Icon Position', position, 'left'),
       },
       color: {
         default: radios('Color', colorOptions, 'neutral'),
       },
     },
     template: `
-          <custom-button :color="color" :invert="invert" :border="border" :disabled="disabled">
-          {{ label }}
-          </custom-button>
+          <button-with-icon 
+            :iconOption="icons" 
+            :color="color" 
+            :position="position" 
+            :label="label">
+          </button-with-icon>
     `,
   }), {
     notes: { markdown: readme + githistory },

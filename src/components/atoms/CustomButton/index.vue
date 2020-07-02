@@ -2,11 +2,11 @@
 
   <button
     class="custom-button"
-    :class="[color, invert]"
+    :class="[color, invert, border]"
     :disabled="disabled"
     @click="onClick">
 
-      {{ label }}
+    <slot></slot>
 
   </button>
 
@@ -25,13 +25,13 @@ export default {
       type: String,
       default: '--invert',
     },
+    border: {
+      type: String,
+      default: '--border',
+    },
     disabled: {
       type: Boolean,
       default: false,
-    },
-    label: {
-      type: String,
-      default: 'Submit',
     },
   },
 
@@ -182,6 +182,10 @@ export default {
       background-color: $white;
       color: $black;
     }
+  }
+
+  .custom-button.--border {
+    border: 1px solid $black;
   }
 
 </style>
