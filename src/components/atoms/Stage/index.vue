@@ -2,7 +2,7 @@
   <div class="stage">
 
     <div class="stage-background">
-      <img src="@/assets/hazelnut_pattern.png" alt="hazelnut_pattern">
+      <img class="image-background" src="@/assets/hazelnut_pattern.png" alt="hazelnut_pattern">
     </div>
 
     <div class="cloud-container">
@@ -28,21 +28,16 @@ export default {
 
 <style lang="scss">
 .stage {
+  position: relative;
   width: 100%;
-  height: 100%;
-  position: fixed;
+  top: 70px;
+  z-index: 50;
 
   .stage-background {
-  position: relative;
+    position: relative;
+    padding-top: 210px;
 
-  &:before {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: (6 / 16) * 100%;
-  }
-
-    img {
+    img.image-background {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -55,21 +50,21 @@ export default {
   }
 
   .cloud-container {
-    transform: translate(10%, -50%);
-    position: relative;
-    min-width: 346px;
+    position: absolute;
+    left: calc(50% - 160px);
+    top: 95px;
+    width: 400px;
 
     img.cloud {
-      width: 80%;
-      min-width: 250px;
+      width: 320px;
     }
 
     .title-container {
-      position: fixed;
-      top: 43%;
-      left: 40%;
-      transform: rotate(-5deg) translate(-50%, -50%);
-      min-width: 200px;
+      position: absolute;
+      top: 65px;
+      left: 10px;
+      transform: rotate(-5deg);
+      min-width: 280px;
 
       .text-container {
         text-align: center;
@@ -87,10 +82,10 @@ export default {
       }
 
       img {
-        max-width: 45px;
+        width: 45px;
         position: absolute;
-        right: -30px;
-        top: 39px;
+        right: 0px;
+        top: 50px;
       }
     }
 
@@ -99,30 +94,39 @@ export default {
   // TABLET STYLES
 
   @include bp-small {
+
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+
     .stage-background {
-      &:before {
-        display: block;
-        content: '';
-        width: 100%;
-        height: 100%;
-        padding-top: 100%;
-        padding-left: (6 / 16) * 100%;
-      }
+      padding-top: 0px;
+      height: 100vh;
     }
 
     .cloud-container {
-      transform: translate(10%, -150%);
+      left: calc(50% - 190px);
+      top: 150px;
+      width: 380px;
+
+      img.cloud {
+        width: 380px;
+      }
 
       .title-container {
+        top: 55px;
+        left: 50px;
+
         .text-container {
           font-size: 46px;
           line-height: 58px;
         }
 
         img {
-          max-width: 100px;
-          right: -85px;
-          top: 60px;
+          width: 60px;
+          right: -35px;
+          top: 70px;
         }
       }
     }
@@ -131,18 +135,30 @@ export default {
   // DESK STYLES
 
   @include bp-medium {
+    top: 110px;
+
     .cloud-container {
-      transform: translate(10%, -185%);
+      left: calc(50% - 250px);
+      top: 150px;
+      width: 500px;
+
+      img.cloud {
+        width: 500px;
+      }
+
       .title-container {
+        top: 85px;
+        left: 65px;
+
         .text-container {
-          font-size: 72px;
-          line-height: 86px;
+          font-size: 60px;
+          line-height: 65px;
         }
 
         img {
-          max-width: 150px;
-          right: -120px;
-          top: 115px;
+          width: 75px;
+          right: -40px;
+          top: 85px;
         }
       }
     }

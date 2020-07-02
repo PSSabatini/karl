@@ -48,6 +48,8 @@ export default {
   .custom-header {
     display: flex;
     align-items: center;
+    position: fixed;
+    z-index: 200;
 
     width: 100%;
     height: 70px;
@@ -57,8 +59,6 @@ export default {
 
     top: 0;
     left: 0;
-
-    border: 1px solid black;
 
     -webkit-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
     -moz-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);

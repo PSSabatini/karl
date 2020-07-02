@@ -1,5 +1,5 @@
 <template>
-  <div class="article-block" :class="theme">
+  <div class="article-block">
     <slot></slot>
   </div>
 </template>
@@ -7,13 +7,6 @@
 <script>
 export default {
   name: 'ArticleBlock',
-
-  props: {
-    theme: {
-      type: String,
-      default: 'white',
-    },
-  },
 };
 </script>
 
@@ -22,24 +15,28 @@ export default {
   position: relative;
   z-index: 1;
   background-color: $white;
+  overflow: scroll;
+  height: 100%;
 
-  padding: 0;
+  right: 0;
 
   @include bp-small () {
-    padding: 0 20px;
+    height: 100%;
+    width: 50%;
+    float: right;
+    top: 70px;
   }
 
   @include bp-medium () {
-    padding: 0 60px;
+    width: 50%;
+    float: right;
+    top: 110px;
   }
 
-  @include bp-large () {
-    padding: 0 100px;
-  }
-}
-
-.article-block.green {
-  background-color: $hempHazelnut;
+  // @include bp-large () {
+  //   padding: 0 20px;
+  //   width: calc(50% -40px);
+  // }
 }
 
 </style>

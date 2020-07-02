@@ -2,19 +2,27 @@ import { storiesOf } from '@storybook/vue';
 // required Knobs interfaces
 import { text, boolean, radios } from '@storybook/addon-knobs';
 // this module
-import ArticleBlock from './index.vue';
+import ContentBlock from './index.vue';
 // module readme
 import readme from './readme.md';
 
 let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
 
-storiesOf('atoms/ArticleBlock', module)
+const theme = {
+  White: 'white',
+  Green: 'green',
+};
+
+storiesOf('atoms/ContentBlock', module)
   .add('default', () => ({
-    components: { ArticleBlock },
+    components: { ContentBlock },
     props: {
+      theme: {
+        default: radios('Theme', theme, 'white'),
+      },
     },
     template: `
-      <article-block></article-block>
+      <content-block :theme="theme"></content-block>
     `,
   }), {
     notes: { markdown: readme + githistory },

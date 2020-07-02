@@ -13,6 +13,7 @@ const iconOptions = {
   'Apple Pay': 'applepay',
   'Add Cart': 'cart-plus',
   'Arrow Left': 'chevron_left',
+  Paypal: 'paypal',
 };
 
 const colorOptions = {

@@ -70,6 +70,10 @@ export default {
       line-height: 40px;
     }
 
+    .icon-paypal {
+      color: $paypal;
+    }
+
     .label {
       line-height: 50px;
     }

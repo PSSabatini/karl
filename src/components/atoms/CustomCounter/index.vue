@@ -44,11 +44,13 @@ export default {
     -moz-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
     box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
 
-    margin: 10px;
+    margin: 10px 0;
     width: 20%;
     min-width: 120px;
 
     display: flex;
+
+    border: 1px solid $grey3;
 
   button,
   input {

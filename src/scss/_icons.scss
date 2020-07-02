@@ -37,6 +37,7 @@ $icons: (
   shopping-cart: "\f07a",
   cart-plus: "\f217",
   user: "\f2c0",
+  paypal: "\f1ed",
 );
 
 @each $name, $glyph in $icons {
