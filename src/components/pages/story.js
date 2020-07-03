@@ -1,20 +1,53 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 // required Knobs interfaces
-import { text, boolean, radios } from '@storybook/addon-knobs';
+import { text, boolean, object } from '@storybook/addon-knobs';
 // modules
 import ArticleBlock from '@/components/atoms/ArticleBlock/index.vue';
 import ContentBlock from '@/components/atoms/ContentBlock/index.vue';
 import Stage from '@/components/atoms/Stage/index.vue';
 import CustomCollapsible from '@/components/atoms/CustomCollapsible/index.vue';
+import ProductFeatures from '@/components/atoms/ProductFeatures/index.vue';
 
 import CustomHeader from '@/components/molecules/CustomHeader/index.vue';
 import ProductInfo from '@/components/molecules/ProductInfo/index.vue';
 
 import ProductShop from '@/components/organisms/ProductShop/index.vue';
 
-
 let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+
+const imageDetails = [
+  {
+    src: 'Koffein.svg',
+    name: 'Koffein',
+    description: 'Mit reinem Koffein',
+  },
+  {
+    src: 'Hoher Ballaststoffgehalt.svg',
+    name: 'Hoher Ballaststoffgehalt',
+    description: 'Hoher Gehalt an Ballaststoffen',
+  },
+  {
+    src: 'Ohne Zuckerzusatz.svg',
+    name: 'Ohne Zuckerzusatz',
+    description: 'Ohne Zusatz von Zucker',
+  },
+  {
+    src: 'Vegan.svg',
+    name: 'Vegan',
+    description: 'Vegan',
+  },
+  {
+    src: 'Proteinquelle.svg',
+    name: 'Proteinquelle',
+    description: 'Proteinquelle',
+  },
+  {
+    src: 'Bio Siegel.svg',
+    name: 'Biologish',
+    description: 'Biologish',
+  },
+];
 
 storiesOf('pages', module)
   .add('default', () => ({
@@ -23,6 +56,7 @@ storiesOf('pages', module)
       ContentBlock,
       Stage,
       CustomCollapsible,
+      ProductFeatures,
 
       CustomHeader,
       ProductInfo,
@@ -30,6 +64,9 @@ storiesOf('pages', module)
       ProductShop,
     },
     props: {
+      imageDetails: {
+        default: object('Image Details', imageDetails),
+      },
     },
     template: `
     <div>
@@ -63,6 +100,8 @@ storiesOf('pages', module)
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
               </custom-collapsible>
+
+              <product-features :imageArray="imageDetails"></product-features>
             </div>
           </div>
         </content-block>

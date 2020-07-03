@@ -1,14 +1,91 @@
 <template>
-  <div class="product-features"></div>
+  <div class="product-features">
+
+    <h5 class="feature-title">{{ featureTitle }}</h5>
+    <p class="feature-description">{{ featureDescription }}</p>
+
+    <div class="feature-image-container">
+      <figure v-for="(feature, index) in imageArray" :key="index">
+        <img class="feature-image" :src="require(`@/assets/${feature.src}`)" :alt="feature.name">
+        <figcaption>{{ feature.description }}</figcaption>
+      </figure>
+    </div>
+
+  </div>
 </template>
 
 <script>
 export default {
   name: 'ProductFeatures',
 
+  props: {
+    imageArray: {
+      default: () => [],
+    },
+    featureTitle: {
+      type: String,
+      default: 'Natürliche Produkte',
+    },
+    featureDescription: {
+      type: String,
+      default: 'Karl Karlo, deine Quelle aus natürlichen und nachhaltigen BIO-Produkten.',
+    },
+  },
+
 };
 </script>
 
 <style lang="scss">
+.product-features {
+  background-color: transparent;
+
+  .feature-title {
+    padding: 20px;
+  }
+
+  .feature-description {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 20px 20px 20px;
+
+    @include bp-small {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  .feature-image-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: calc(100% / 5);
+      margin-bottom: 20px;
+
+      .feature-image {
+        margin-bottom: 20px;
+      }
+
+      figcaption {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        color: $black;
+        text-align: center;
+
+        @include bp-small {
+          font-size: 24px;
+          line-height: 34px;
+        }
+      }
+
+    }
+  }
+}
 
 </style>
