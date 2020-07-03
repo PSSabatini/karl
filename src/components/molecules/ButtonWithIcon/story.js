@@ -7,7 +7,7 @@ import ButtonWithIcon from './index.vue';
 // module readme
 import readme from './readme.md';
 
-let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+let githistory = process.env.historyfile['src-components-molecules-ButtonWithIcon-index-vue'];
 
 const iconOptions = {
   'Apple Pay': 'applepay',
@@ -48,12 +48,12 @@ storiesOf('molecules/ButtonWithIcon', module)
       },
     },
     template: `
-          <button-with-icon 
-            :iconOption="icons" 
-            :color="color" 
-            :position="position" 
-            :label="label">
-          </button-with-icon>
+      <button-with-icon 
+        :iconOption="icons" 
+        :color="color" 
+        :position="position" 
+        :label="label">
+      </button-with-icon>
     `,
   }), {
     notes: { markdown: readme + githistory },

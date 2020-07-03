@@ -7,7 +7,7 @@ import CustomCollapsible from './index.vue';
 // module readme
 import readme from './readme.md';
 
-let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+let githistory = process.env.historyfile['src-components-atoms-CustomCollapsible-index-vue'];
 
 storiesOf('atoms/CustomCollapsible', module)
   .add('default', () => ({

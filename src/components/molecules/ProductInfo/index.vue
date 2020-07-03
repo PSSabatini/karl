@@ -27,7 +27,7 @@ export default {
     padding: 20px;
     transform: rotate(355deg);
     position: absolute;
-    top: 750px;
+    top: -40px;
     z-index: 5000;
   }
 

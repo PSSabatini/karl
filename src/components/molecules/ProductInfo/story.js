@@ -7,7 +7,7 @@ import ProductInfo from './index.vue';
 // module readme
 import readme from './readme.md';
 
-let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+let githistory = process.env.historyfile['src-components-molecules-ProductInfo-index-vue'];
 
 storiesOf('molecules/ProductInfo', module)
   .add('default', () => ({

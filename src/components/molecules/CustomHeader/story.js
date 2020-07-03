@@ -7,7 +7,7 @@ import CustomHeader from './index.vue';
 // module readme
 import readme from './readme.md';
 
-let githistory = process.env.historyfile['src-components-atoms-CustomButton-index-vue'];
+let githistory = process.env.historyfile['src-components-molecules-CustomHeader-index-vue'];
 
 storiesOf('molecules/CustomHeader', module)
   .add('default', () => ({
