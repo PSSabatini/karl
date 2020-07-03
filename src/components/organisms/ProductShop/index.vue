@@ -5,7 +5,7 @@
       <div class="columns">
 
         <div class="image-container">
-          <img class="product-image" src="@/assets/flowpack_image.png" alt="flowpack">
+          <image-gallery :imageArray="imageArray"></image-gallery>
         </div>
 
       </div>
@@ -69,6 +69,7 @@
 <script>
 import CustomCounter from '@/components/atoms/CustomCounter/index.vue';
 import ButtonWithIcon from '@/components/molecules/ButtonWithIcon/index.vue';
+import ImageGallery from '@/components/atoms/ImageGallery/index.vue';
 
 export default {
   name: 'ProductShop',
@@ -76,6 +77,7 @@ export default {
   components: {
     CustomCounter,
     ButtonWithIcon,
+    ImageGallery,
   },
 
   props: {
@@ -86,6 +88,18 @@ export default {
     productPrice: {
       type: String,
       default: '1,95 €',
+    },
+    imageArray: {
+      default: [
+        {
+          src: 'flowpack_image.png',
+          alt: 'Flowpack Hemp',
+        },
+        {
+          src: 'tray.png',
+          alt: 'Tray Hemp',
+        },
+      ],
     },
   },
 };
