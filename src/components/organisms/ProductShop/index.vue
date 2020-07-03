@@ -90,7 +90,7 @@ export default {
       default: '1,95 €',
     },
     imageArray: {
-      default: [
+      default: () => ([
         {
           src: 'flowpack_image.png',
           alt: 'Flowpack Hemp',
@@ -99,7 +99,7 @@ export default {
           src: 'tray.png',
           alt: 'Tray Hemp',
         },
-      ],
+      ]),
     },
   },
 };

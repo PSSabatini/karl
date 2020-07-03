@@ -21,6 +21,7 @@ export default {
 .content-block {
   width: 100%;
   z-index: 1000;
+  // overflow-y: visible;
 
   padding: 40px 0;
 }

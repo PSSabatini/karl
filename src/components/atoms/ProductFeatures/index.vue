@@ -29,7 +29,38 @@ export default {
 
   props: {
     imageArray: {
-      default: () => [],
+      default: () => ([
+        {
+          src: 'Koffein.svg',
+          name: 'Koffein',
+          description: 'Mit reinem Koffein',
+        },
+        {
+          src: 'Hoher Ballaststoffgehalt.svg',
+          name: 'Hoher Ballaststoffgehalt',
+          description: 'Hoher Gehalt an Ballaststoffen',
+        },
+        {
+          src: 'Ohne Zuckerzusatz.svg',
+          name: 'Ohne Zuckerzusatz',
+          description: 'Ohne Zusatz von Zucker',
+        },
+        {
+          src: 'Vegan.svg',
+          name: 'Vegan',
+          description: 'Vegan',
+        },
+        {
+          src: 'Proteinquelle.svg',
+          name: 'Proteinquelle',
+          description: 'Proteinquelle',
+        },
+        {
+          src: 'Bio Siegel.svg',
+          name: 'Biologish',
+          description: 'Biologish',
+        },
+      ]),
     },
     featureTitle: {
       type: String,
