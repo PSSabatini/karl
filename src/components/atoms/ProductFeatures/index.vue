@@ -56,6 +56,10 @@ export default {
 .product-features {
   background-color: transparent;
 
+  @include bp-medium {
+    padding: 0 40px;
+  }
+
   .dots {
     margin: 40px 0;
   }
@@ -85,8 +89,8 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-basis: calc(100% / 5);
-      margin-bottom: 20px;
+      flex-basis: calc(100% / 3);
+      margin: 0 0 40px 0;
 
       .feature-image {
         margin-bottom: 20px;
@@ -98,6 +102,8 @@ export default {
         font-weight: 700;
         color: $black;
         text-align: center;
+        margin: 0;
+        min-width: 180px;
 
         @include bp-small {
           font-size: 24px;
