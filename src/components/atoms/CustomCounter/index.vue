@@ -60,6 +60,7 @@ export default {
     letter-spacing: 0;
     text-transform: uppercase;
     color: $black;
+    background-color: $white;
 
     text-align: center;
 

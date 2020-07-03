@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 .content-block {
   width: 100%;
+  z-index: 1000;
 
   padding: 40px 0;
 }
@@ -27,5 +28,4 @@ export default {
 .content-block.green {
   background-color: $hempHazelnut;
 }
-
 </style>

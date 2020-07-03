@@ -39,11 +39,15 @@ storiesOf('pages', module)
         <p>HOORAY!</p>
       </stage>
 
-      <article-block>
+      <article-block theme="white">
 
         <content-block>
           <product-shop></product-shop>
         </content-block>
+
+      </article-block>
+
+      <article-block theme="green">
 
         <content-block theme="green">
           <div class="row collapse">

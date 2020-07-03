@@ -4,13 +4,15 @@
     <div class="row">
       <div class="columns">
 
-        <div class="image-container"></div>
+        <div class="image-container">
+          <img class="product-image" src="@/assets/flowpack_image.png" alt="flowpack">
+        </div>
 
       </div>
     </div>
 
     <div class="row">
-      <div class="columns small-6 medium-4">
+      <div class="columns small-6 medium-6">
 
         <p class="product-title">{{ productTitle }}</p>
         <span class="product-price">{{ productPrice }}</span>
@@ -19,7 +21,7 @@
     </div>
 
     <div class="row">
-      <div class="columns medium-4">
+      <div class="columns medium-6">
 
         <div class="link-image-container">
           <a class="link-image" href="#">Flowpack</a>
@@ -30,13 +32,13 @@
     </div>
 
   <div class="row">
-    <div class="columns small-3">
+    <div class="columns small-4">
 
       <custom-counter></custom-counter>
 
     </div>
 
-    <div class="columns small-9">
+    <div class="columns small-8">
 
       <button-with-icon
         iconOption="cart-plus"
@@ -83,7 +85,7 @@ export default {
     },
     productPrice: {
       type: String,
-      default: 'x,xx €',
+      default: '1,95 €',
     },
   },
 };
@@ -94,10 +96,20 @@ export default {
   position: relative;
 
   .image-container {
-    background-color: black;
+    top: 0;
+    left: 0;
+    background-color: $white;
     width: 100%;
-    height: 50vh;
+    min-height: 170px;
+    max-height: 460px;
     margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    .product-image {
+      object-fit: contain;
+    }
   }
 
   .product-title {
@@ -112,7 +124,7 @@ export default {
 
     padding: 5px;
 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .product-price {
@@ -143,6 +155,10 @@ export default {
         border-bottom: 2px solid $black;
       }
     }
+  }
+
+  @include bp-medium {
+    padding: 0 40px;
   }
 
 }

@@ -52,6 +52,7 @@ export default {
     letter-spacing: 0;
     text-transform: uppercase;
     color: $black;
+    background-color: $white;
     cursor: pointer;
 
     width: 100%;
@@ -75,6 +76,16 @@ export default {
     &:hover {
       color: $white;
       background-color: $black;
+    }
+
+    &.neutral {
+      background-color: $white;
+      color: $black;
+
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
     }
 
     &.green {
