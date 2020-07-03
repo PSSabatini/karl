@@ -1,6 +1,8 @@
 <template>
   <div class="product-features">
 
+    <img class="dots" src="@/assets/dots.png" alt="dots"/>
+
     <h5 class="feature-title">{{ featureTitle }}</h5>
     <p class="feature-description">{{ featureDescription }}</p>
 
@@ -10,6 +12,13 @@
         <figcaption>{{ feature.description }}</figcaption>
       </figure>
     </div>
+
+    <img class="dots" src="@/assets/dots.png" alt="dots"/>
+
+    <h5 class="feature-title">{{ productInfoTitle }}</h5>
+    <p class="feature-description">{{ productInfoDescription }}</p>
+
+    <img class="dots" src="@/assets/dots.png" alt="dots"/>
 
   </div>
 </template>
@@ -30,6 +39,14 @@ export default {
       type: String,
       default: 'Karl Karlo, deine Quelle aus natürlichen und nachhaltigen BIO-Produkten.',
     },
+    productInfoTitle: {
+      type: String,
+      default: 'Produktversprechen',
+    },
+    productInfoDescription: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+    },
   },
 
 };
@@ -38,6 +55,10 @@ export default {
 <style lang="scss">
 .product-features {
   background-color: transparent;
+
+  .dots {
+    margin: 40px 0;
+  }
 
   .feature-title {
     padding: 20px;
