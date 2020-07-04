@@ -43,7 +43,7 @@ export default {
 <style lang="scss">
 .button-with-icon {
   .custom-button {
-    padding: 0;
+    padding: 0px 5px;
     position: relative;
   }
 
@@ -66,7 +66,7 @@ export default {
     }
 
     .icon-applepay {
-      font-size: 35px;
+      font-size: 40px;
       line-height: 40px;
     }
 

@@ -30,7 +30,7 @@ export default {
 .stage {
   position: relative;
   width: 100%;
-  top: 70px;
+  top: 25px;
   z-index: 50;
 
   .stage-background {

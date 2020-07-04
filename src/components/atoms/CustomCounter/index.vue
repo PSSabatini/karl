@@ -3,7 +3,7 @@
   <div class="custom-counter">
 
     <button @click="decrease()">-</button>
-    <input type="number" readonly min="0" max="999" :value="value">
+    <span>{{ value }}</span>
     <button @click="increase()">+</button>
 
   </div>
@@ -44,7 +44,7 @@ export default {
   -moz-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
   box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
 
-  margin: 0px 10px 20px 0px;
+  margin: 0px 5px 20px 0px;
 
   display: flex;
   justify-content: space-evenly;
@@ -53,16 +53,16 @@ export default {
   max-height: 48px;
 
   button,
-  input {
+  span {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0;
     text-transform: uppercase;
+    text-align: center;
+
     color: $black;
     background-color: $white;
-
-    text-align: center;
 
     border: none;
     cursor: pointer;
@@ -70,10 +70,8 @@ export default {
     padding: 15px 5px;
   }
 
-  input {
-    width: 40px;
-    padding-left: 8px;
-    margin-right: -8px;
+  span {
+    display: inline-block;
   }
 }
 

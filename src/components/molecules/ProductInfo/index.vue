@@ -60,7 +60,7 @@ export default {
   }
 
   .product-description {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .custom-collapsible {

@@ -49,6 +49,7 @@ export default {
   line-height: 24px;
   background-color: transparent;
   display: inline-block;
+  margin-bottom: 20px;
 
   cursor: pointer;
 

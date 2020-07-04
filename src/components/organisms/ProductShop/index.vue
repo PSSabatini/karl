@@ -26,12 +26,12 @@
     </div>
 
   <div class="row collapse">
-    <div class="columns small-4 large-3">
+    <div class="columns small-3 large-3">
 
       <custom-counter></custom-counter>
 
     </div>
-    <div class="columns small-8 large-6">
+    <div class="columns small-9 large-6">
       <button-with-icon
         iconOption="cart-plus"
         color="black"
@@ -100,7 +100,7 @@ export default {
 <style lang="scss">
 .product-shop {
   position: relative;
-  padding-top: 110px;
+  padding-top: 80px;
 
   @include bp-small {
     padding-top: 50px;

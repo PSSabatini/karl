@@ -44,16 +44,16 @@ export default {
       transform: rotate(355deg);
 
       position:absolute;
-      padding: 10px 20px;
-      margin-top: -15px;
+      padding: 20px;
+      margin-top: -25px;
       margin-left: -5px;
 
       @include bp-small {
-        margin-top: -21px;
+        margin-top: -30px;
       }
 
       @include bp-large {
-        margin-top: -30px;
+        margin-top: -35px;
       }
     }
   }

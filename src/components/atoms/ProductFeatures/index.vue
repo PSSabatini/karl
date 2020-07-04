@@ -89,6 +89,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // word-break: break-all;
 
   font-size: 16px;
   line-height: 24px;
@@ -99,7 +100,7 @@ export default {
   }
 
   .dots {
-    margin: 40px 0px;
+    margin: 0px 0px 20px 0px;
     width: 80%;
   }
 
@@ -110,7 +111,7 @@ export default {
 
   .feature-description {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom:20px;
   }
 
   .feature-image-container {
@@ -124,7 +125,7 @@ export default {
       justify-content: center;
       align-items: center;
       flex-basis: calc(100% / 3);
-      margin: 0 0 40px 0;
+      margin: 0 0 20px 0;
 
       .feature-image {
         margin-bottom: 20px;
@@ -135,7 +136,7 @@ export default {
         color: $black;
         text-align: center;
         margin: 0;
-        min-width: 180px;
+        min-width: 140px;
       }
 
     }
