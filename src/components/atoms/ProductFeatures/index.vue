@@ -87,22 +87,15 @@ export default {
 .product-features {
   background-color: transparent;
 
-  @include bp-medium {
-    padding: 0 40px;
-  }
-
   .dots {
-    margin: 40px 0;
-  }
-
-  .feature-title {
-    padding: 20px;
+    margin: 40px 0px;
+    width: 40%;
+    left: 50%;
   }
 
   .feature-description {
     font-size: 16px;
     line-height: 24px;
-    padding: 0 20px 20px 20px;
 
     @include bp-small {
       font-size: 24px;

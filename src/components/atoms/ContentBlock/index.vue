@@ -1,5 +1,5 @@
 <template>
-  <div class="content-block" :class="theme">
+  <div class="content-block">
     <slot></slot>
   </div>
 </template>
@@ -8,25 +8,17 @@
 export default {
   name: 'ContentBlock',
 
-  props: {
-    theme: {
-      type: String,
-      default: 'white',
-    },
-  },
 };
 </script>
 
 <style lang="scss">
-.content-block {
-  width: 100%;
-  z-index: 1000;
-  // overflow-y: visible;
+  .content-block {
+    background-color: transparent;
 
-  padding: 40px 0;
-}
+    padding: 60px 0;
 
-.content-block.green {
-  background-color: $hempHazelnut;
-}
+    @include bp-small {
+      padding: 80px 0;
+    }
+  }
 </style>

@@ -1,5 +1,10 @@
 <template>
-  <div class="article-block" :class="theme">
+  <div class="article-block" :class="[ theme, fullWidth ]">
+
+    <div v-if="tag" class="tag">
+      <h2>{{ tag }}</h2>
+    </div>
+
     <slot></slot>
   </div>
 </template>
@@ -9,70 +14,62 @@ export default {
   name: 'ArticleBlock',
 
   props: {
+    fullWidth: {
+      type: String,
+      default: '',
+    },
     theme: {
       type: String,
       default: 'white',
+    },
+    tag: {
+      type: String,
+      default: '',
     },
   },
 };
 </script>
 
-<style lang="scss">
-.article-block {
-  position: relative;
-  z-index: 1;
-  background-color: $white;
-  overflow-y: scroll;
-  height: 100%;
-  top: 70px;
-
-  right: 0;
-
-  .content-block {
-    right: 0;
-    float: right;
-  }
-
-  @include bp-small () {
-    .content-block {
-      height: 100%;
+ <style lang="scss">
+  .article-block {
+    @include bp-small {
       width: 50%;
-      right: 0;
+      margin-left: 50%;
+    }
+
+    .tag {
+      background-color: $black;
+      color: $white;
+
+      transform: rotate(355deg);
+
+      position:absolute;
+      padding: 10px 20px;
+      margin-top: -15px;
+      margin-left: -5px;
+
+      @include bp-small {
+        margin-top: -21px;
+      }
     }
   }
 
-  @include bp-medium () {
-    .content-block {
-      width: 50%;
-      right: 0;
-      top: 110px;
-    }
+  .article-block.green {
+    background-color: $hempHazelnut;
   }
 
-  // @include bp-large () {
-  //   padding: 0 20px;
-  //   width: calc(50% -40px);
-  // }
-}
-
-.article-block.green {
-  background-color: $hempHazelnut;
-
-  @include bp-max-medium () {
-    z-index: 1000;
-    .content-block {
+  .article-block.--full-width {
+    @include bp-small {
+      z-index: 150;
+      position: absolute;
       width: 100%;
-      z-index: 1000;
-      height: 100%;
+      margin-left: 0;
     }
-  }
 
-  @include bp-medium() {
-    .content-block {
+    @include bp-medium {
+      margin-left: 50%;
       width: 50%;
-      float: right;
+      background-color: $hempHazelnut;
     }
   }
-}
-
 </style>

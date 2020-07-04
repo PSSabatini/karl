@@ -170,11 +170,6 @@ export default {
       }
     }
   }
-
-  @include bp-medium {
-    padding: 0 40px;
-  }
-
 }
 
 </style>
