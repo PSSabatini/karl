@@ -107,7 +107,7 @@ export default {
 
     .cloud-container {
       left: calc(50% - 190px);
-      top: calc(50% - 200px);
+      top: calc(50% - 140px);
       width: 380px;
 
       img.cloud {
@@ -139,6 +139,7 @@ export default {
 
     .cloud-container {
       left: calc(50% - 250px);
+      top: calc(50% - 200px);
       width: 500px;
 
       img.cloud {
