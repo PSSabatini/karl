@@ -64,7 +64,7 @@ export default {
         object-fit: contain;
         width: 100%;
         max-width: 900px;
-        height: 350px;
+        height: 250px;
       }
     }
   }
@@ -78,16 +78,17 @@ export default {
 
       &:hover{
         border: 2px solid $grey3;
+        margin: 10px 10px 8px 0;
         cursor: pointer;
       }
 
       img {
         height: 100%;
         width: 100%;
-        min-width: 60px;
-        min-height: 60px;
-        max-height: 90px;
-        max-width: 90px;
+        min-width: 50px;
+        min-height: 50px;
+        max-height: 70px;
+        max-width: 70px;
         object-fit: contain;
       }
     }

@@ -100,7 +100,11 @@ export default {
 <style lang="scss">
 .product-shop {
   position: relative;
-  padding-top: 70px;
+  padding-top: 100px;
+
+  @include bp-small {
+    padding-top: 35px;
+  }
 
   .image-container {
     top: 0;
@@ -135,14 +139,17 @@ export default {
   }
 
   .product-price {
+    display: inline-block;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .link-image-container {
+    margin-bottom: 20px;
+
     .link-image {
       text-decoration: none;
       color: $black;

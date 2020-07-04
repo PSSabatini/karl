@@ -86,21 +86,31 @@ export default {
 <style lang="scss">
 .product-features {
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  @include bp-large {
+    font-size: 24px;
+    line-height: 34px;
+  }
 
   .dots {
     margin: 40px 0px;
-    width: 40%;
-    left: 50%;
+    width: 80%;
+  }
+
+  .feature-title {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .feature-description {
-    font-size: 16px;
-    line-height: 24px;
-
-    @include bp-small {
-      font-size: 24px;
-      line-height: 34px;
-    }
+    width: 100%;
+    margin-bottom: 40px;
   }
 
   .feature-image-container {
@@ -121,18 +131,11 @@ export default {
       }
 
       figcaption {
-        font-size: 16px;
-        line-height: 24px;
         font-weight: 700;
         color: $black;
         text-align: center;
         margin: 0;
         min-width: 180px;
-
-        @include bp-small {
-          font-size: 24px;
-          line-height: 34px;
-        }
       }
 
     }
