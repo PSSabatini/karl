@@ -29,17 +29,26 @@
     <span class="icon-user"></span>
     <span class="icon icon-shopping-cart"></span>
 
+    <button-with-icon
+      iconOption="chevron_left"
+      color="black"
+      position="left"
+      label="Alle Produkte">
+    </button-with-icon>
+
   </div>
 </template>
 
 <script>
 import BurgerMenu from '@/components/atoms/BurgerMenu/index.vue';
+import ButtonWithIcon from '@/components/molecules/ButtonWithIcon/index.vue';
 
 export default {
   name: 'CustomHeader',
 
   components: {
     BurgerMenu,
+    ButtonWithIcon,
   },
 };
 </script>
@@ -67,6 +76,35 @@ export default {
     .karl_logo {
       margin-left: 65px;
       height: 30px;
+    }
+
+    &:hover {
+      .button-with-icon {
+        opacity: 1;
+      }
+    }
+
+    .button-with-icon {
+      opacity: 0;
+      position: absolute;
+      top: 70px;
+      left: 0;
+
+      transition: opacity 250ms ease;
+
+      @include bp-medium {
+        top: 110px;
+      }
+
+      .custom-button {
+        padding: 0px 20px 0px 5px;
+        text-transform: none;
+        height: 100%;
+
+        .label {
+          line-height: 40px;
+        }
+      }
     }
 
     .icon-shopping-cart:before {
