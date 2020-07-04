@@ -51,8 +51,42 @@ export default {
     line-height: 24px;
   }
 
-  @include bp-medium {
-    // padding: 60px 60px 40px 60px;
+  .custom-collapsible {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+
+    @include bp-small {
+      margin-left: -40px;
+      margin-right: -40px;
+      width: calc(100% + 80px);
+
+      .collapsible-title-wrapper {
+        padding: 0 40px;
+      }
+
+      .collapsible-content {
+        p{
+          padding: 20px 40px;
+        }
+      }
+    }
+
+    @include bp-large {
+      margin-left: -60px;
+      margin-right: -60px;
+      width: calc(100% + 120px);
+
+      .collapsible-title-wrapper {
+        padding: 0 60px;
+      }
+
+      .collapsible-content {
+        p{
+          padding: 20px 60px;
+        }
+      }
+    }
   }
 }
 

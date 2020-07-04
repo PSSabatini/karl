@@ -34,7 +34,7 @@ export default {
   .article-block {
     @include bp-small {
       width: 50%;
-      margin-left: 50%;
+      margin-left: calc(50% - 1px);
     }
 
     .tag {
@@ -67,7 +67,7 @@ export default {
     }
 
     @include bp-medium {
-      margin-left: 50%;
+      margin-left: calc(50% - 1px);
       width: 50%;
       background-color: $hempHazelnut;
     }

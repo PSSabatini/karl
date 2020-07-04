@@ -15,10 +15,14 @@ export default {
   .content-block {
     background-color: transparent;
 
-    padding: 60px 0;
+    padding: 40px 20px;
 
     @include bp-small {
-      padding: 80px 0;
+      padding: 80px 40px;
+    }
+
+    @include bp-large {
+      padding: 80px 60px;
     }
   }
 </style>

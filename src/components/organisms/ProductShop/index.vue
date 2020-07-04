@@ -1,18 +1,12 @@
 <template>
   <div class="product-shop">
 
-    <div class="row">
-      <div class="columns">
-
-        <div class="image-container">
-          <image-gallery :imageArray="imageArray"></image-gallery>
-        </div>
-
-      </div>
+    <div class="image-container">
+      <image-gallery :imageArray="imageArray"></image-gallery>
     </div>
 
-    <div class="row">
-      <div class="columns small-6 medium-6">
+    <div class="row collapse">
+      <div class="columns small-6 large-4">
 
         <p class="product-title">{{ productTitle }}</p>
         <span class="product-price">{{ productPrice }}</span>
@@ -20,7 +14,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row collapse">
       <div class="columns medium-6">
 
         <div class="link-image-container">
@@ -31,15 +25,13 @@
       </div>
     </div>
 
-  <div class="row">
-    <div class="columns small-4">
+  <div class="row collapse">
+    <div class="columns small-4 large-3">
 
       <custom-counter></custom-counter>
 
     </div>
-
-    <div class="columns small-8">
-
+    <div class="columns small-8 large-6">
       <button-with-icon
         iconOption="cart-plus"
         color="black"
@@ -50,8 +42,8 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="columns">
+  <div class="row collapse">
+    <div class="columns large-9">
 
       <button-with-icon
         iconOption="applepay"
@@ -108,6 +100,7 @@ export default {
 <style lang="scss">
 .product-shop {
   position: relative;
+  padding-top: 70px;
 
   .image-container {
     top: 0;
