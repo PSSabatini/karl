@@ -64,10 +64,11 @@ export default {
   }
 
   .collapsible-content {
-    overflow: hidden;
-    max-height: 0px;
+    transform-origin: top;
+    transform: scaleY(0);
+    height: 0;
 
-    transition: max-height 250ms ease-in-out;
+    transition: transform 200ms ease;
 
     p {
       padding: 20px;
@@ -76,7 +77,8 @@ export default {
 
   .collapsible-content.--opened {
     display: inline-block;
-    max-height: 1400px;
+    transform: scaleY(1);
+    height: 100%;
   }
 
   .icon-chevron-down.--opened {

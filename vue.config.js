@@ -8,6 +8,8 @@ module.exports = {
           @import "@/scss/_layout.scss";
           @import "@/scss/_typo.scss";
           @import "@/scss/_variables.scss";
+          @import "@/scss/_icons.scss";
+          @import "@/scss/build_helper.scss";
         `,
       },
     },
