@@ -40,16 +40,17 @@ export default {
 
 <style lang="scss">
 .custom-counter {
-    -webkit-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
-    -moz-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
-    box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
+  -webkit-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
+  -moz-box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
+  box-shadow: 0px 4px 6px -1px rgba(194,194,194,0.8);
 
-    margin: 0px 10px 20px 0px;
+  margin: 0px 10px 20px 0px;
 
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 
-    border: 1px solid $grey3;
+  border: 1px solid $grey3;
+  max-height: 48px;
 
   button,
   input {

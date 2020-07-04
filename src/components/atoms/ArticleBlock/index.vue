@@ -51,6 +51,10 @@ export default {
       @include bp-small {
         margin-top: -21px;
       }
+
+      @include bp-large {
+        margin-top: -30px;
+      }
     }
   }
 

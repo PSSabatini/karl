@@ -82,10 +82,10 @@ export default {
       }
 
       img {
-        width: 45px;
+        width: 55px;
         position: absolute;
-        right: 0px;
-        top: 50px;
+        right: -5px;
+        top: 40px;
       }
     }
 
@@ -107,7 +107,7 @@ export default {
 
     .cloud-container {
       left: calc(50% - 190px);
-      top: 150px;
+      top: calc(50% - 200px);
       width: 380px;
 
       img.cloud {
@@ -139,7 +139,6 @@ export default {
 
     .cloud-container {
       left: calc(50% - 250px);
-      top: 150px;
       width: 500px;
 
       img.cloud {
@@ -157,10 +156,41 @@ export default {
 
         img {
           width: 75px;
-          right: -40px;
-          top: 85px;
+          right: -45px;
+          top: 80px;
         }
       }
+    }
+
+    // Large Styles
+
+    @include bp-large {
+
+    .cloud-container {
+      left: calc(50% - 300px);
+
+      width: 600px;
+
+      img.cloud {
+        width: 600px;
+      }
+
+      .title-container {
+        top: 105px;
+        left: 75px;
+
+        .text-container {
+          font-size: 72px;
+          line-height: 86px;
+        }
+
+        img {
+          width: 95px;
+          right: -60px;
+          top: 95px;
+        }
+      }
+    }
     }
 
   }

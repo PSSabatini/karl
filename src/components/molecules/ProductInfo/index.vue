@@ -53,14 +53,14 @@ export default {
     line-height: 34px;
   }
 
-  margin-top: 20px;
+  margin-top: 30px;
 
   @include bp-small {
     margin-top: 10px;
   }
 
   .product-description {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .custom-collapsible {

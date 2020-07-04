@@ -15,7 +15,7 @@
     </div>
 
     <div class="row collapse">
-      <div class="columns medium-6">
+      <div class="columns medium-8">
 
         <div class="link-image-container">
           <a class="link-image" href="#">Flowpack</a>
@@ -100,10 +100,10 @@ export default {
 <style lang="scss">
 .product-shop {
   position: relative;
-  padding-top: 100px;
+  padding-top: 110px;
 
   @include bp-small {
-    padding-top: 35px;
+    padding-top: 50px;
   }
 
   .image-container {

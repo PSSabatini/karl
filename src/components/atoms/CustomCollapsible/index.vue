@@ -52,6 +52,11 @@ export default {
 
   cursor: pointer;
 
+  @include bp-large {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
   .collapsible-title-wrapper {
     padding: 0 20px;
     height: 60px;
