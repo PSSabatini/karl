@@ -134,7 +134,7 @@ export default {
 
   .menu-link-container {
     position: absolute;
-    display: flex;
+    display: none;
     background-color: $white;
 
     height: 40vh;
@@ -212,6 +212,7 @@ export default {
     }
   }
   .menu-link-container.--active {
+    display: flex;
     opacity: 1;
   }
 }
