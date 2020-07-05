@@ -15,13 +15,17 @@
     </div>
 
     <div class="row collapse">
-      <div class="columns medium-8">
+      <div class="columns small-6 large-4">
 
         <div class="link-product-type-container">
           <a class="link-product-type" @click="(e) => selectedProduct(e)">Flowpack</a>
           <a class="link-product-type" @click="(e) => selectedProduct(e)">Tray (18 St)</a>
         </div>
 
+      </div>
+
+      <div  v-if="errorMessage !== ''" class="columns small-6 large-7">
+        <span class="error-message">{{errorMessage}}</span>
       </div>
     </div>
 
@@ -32,6 +36,7 @@
 
     </div>
     <div class="columns small-9 large-6">
+
       <button-with-icon
         iconOption="cart-plus"
         color="black"
@@ -100,6 +105,7 @@ export default {
     return {
       amount: 0,
       productType: '',
+      errorMessage: '',
     };
   },
 
@@ -121,11 +127,23 @@ export default {
     },
 
     addCart() {
-      const cartInfo = {
-        amount: this.amount,
-        productType: this.productType,
-      };
-      this.$emit('cartInfo', cartInfo);
+      if (this.amount !== 0 && this.productType !== '') {
+        this.errorMessage = '';
+        const cartInfo = {
+          amount: this.amount,
+          productType: this.productType,
+        };
+        this.$emit('cartInfo', cartInfo);
+      } else {
+        // eslint-disable-next-line
+        if (this.amount === 0 && this.productType === '') {
+          this.errorMessage = 'Please, select the product and quantity.';
+        } else if (this.productType === '') {
+          this.errorMessage = 'Please, select the product';
+        } else {
+          this.errorMessage = 'Please, select the quantity';
+        }
+      }
     },
   },
 };
@@ -210,6 +228,12 @@ export default {
     .link-product-type.--selected {
       font-weight: 700;
     }
+  }
+
+  .error-message {
+    display: inline-block;
+    color: $red;
+    padding-top: 5px;
   }
 }
 
