@@ -17,9 +17,9 @@
     <div class="row collapse">
       <div class="columns medium-8">
 
-        <div class="link-image-container">
-          <a class="link-image" href="#">Flowpack</a>
-          <a class="link-image" href="#">Tray (18 St)</a>
+        <div class="link-product-type-container">
+          <a class="link-product-type" @click="(e) => selectedProduct(e)">Flowpack</a>
+          <a class="link-product-type" @click="(e) => selectedProduct(e)">Tray (18 St)</a>
         </div>
 
       </div>
@@ -28,7 +28,7 @@
   <div class="row collapse">
     <div class="columns small-3 large-3">
 
-      <custom-counter></custom-counter>
+      <custom-counter @amount="getAmount"></custom-counter>
 
     </div>
     <div class="columns small-9 large-6">
@@ -36,7 +36,8 @@
         iconOption="cart-plus"
         color="black"
         position="right"
-        label="in den warenkorb">
+        label="in den warenkorb"
+        @click.native="addCart()">
       </button-with-icon>
 
     </div>
@@ -94,6 +95,39 @@ export default {
       ]),
     },
   },
+
+  data() {
+    return {
+      amount: 0,
+      productType: '',
+    };
+  },
+
+  methods: {
+    getAmount(value) {
+      this.amount = value;
+    },
+
+    selectedProduct(e) {
+      const linkArray = document.getElementsByClassName('link-product-type');
+
+      linkArray.forEach((link) => {
+        if (link.classList.contains('--selected')) {
+          link.classList.remove('--selected');
+        }
+      });
+      e.target.classList.add('--selected');
+      this.productType = e.target.innerText;
+    },
+
+    addCart() {
+      const cartInfo = {
+        amount: this.amount,
+        productType: this.productType,
+      };
+      this.$emit('cartInfo', cartInfo);
+    },
+  },
 };
 </script>
 
@@ -147,10 +181,10 @@ export default {
     margin-bottom: 20px;
   }
 
-  .link-image-container {
+  .link-product-type-container {
     margin-bottom: 20px;
 
-    .link-image {
+    .link-product-type {
       text-decoration: none;
       color: $black;
 
@@ -160,6 +194,8 @@ export default {
 
       margin-right: 10px;
 
+      cursor: pointer;
+
       &:visited {
         color: $black;
       }
@@ -168,6 +204,10 @@ export default {
         font-weight: 700;
         border-bottom: 2px solid $black;
       }
+    }
+
+    .link-product-type.--selected {
+      font-weight: 700;
     }
   }
 }

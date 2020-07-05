@@ -25,6 +25,7 @@ export default {
       if (this.value > 0) {
         this.value -= 1;
       }
+      this.$emit('amount', this.value);
       return this.value;
     },
 
@@ -32,6 +33,7 @@ export default {
       if (this.value < 999) {
         this.value += 1;
       }
+      this.$emit('amount', this.value);
       return this.value;
     },
   },

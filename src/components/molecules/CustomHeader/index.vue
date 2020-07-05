@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-header">
+  <div class="custom-header" :updateCart="updateCart">
 
     <burger-menu></burger-menu>
 
@@ -49,6 +49,19 @@ export default {
   components: {
     BurgerMenu,
     ButtonWithIcon,
+  },
+
+  props: {
+    updateCart: {
+      default: () => {},
+    },
+  },
+
+  watch: {
+    updateCart() {
+      const cart = document.getElementsByClassName('icon-shopping-cart');
+      cart[0].classList.add('--with-content');
+    },
   },
 };
 </script>
@@ -118,6 +131,28 @@ export default {
       font-size: 20px;
     }
 
+    .icon-shopping-cart.--with-content {
+      &::after {
+        content: '';
+
+        right: 15px;
+        top: 25px;
+        position: absolute;
+
+        height: 2px;
+        width: 2px;
+
+        border: 4px solid $physalisTurmeric;
+        background-color: $physalisTurmeric;
+        border-radius: 5px;
+
+        @include bp-medium {
+          right: 55px;
+          top: 50px;
+        }
+      }
+    }
+
       span:hover::before {
         transition: 250ms ease color;
         color: $hempHazelnut;
@@ -185,7 +220,7 @@ export default {
           }
 
           &:hover {
-            color: $hempHazelnut;
+            color: $physalisTurmeric;
           }
         }
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="page-template">
-    <custom-header></custom-header>
+    <custom-header :updateCart="this.update"></custom-header>
       <stage>
         <p>HEMP HEMP</p>
         <p>HOORAY!</p>
@@ -9,7 +9,7 @@
       <article-block theme="white">
 
         <content-block>
-          <product-shop></product-shop>
+          <product-shop @cartInfo="updateCart"></product-shop>
         </content-block>
 
       </article-block>
@@ -50,6 +50,18 @@ export default {
     ProductInfo,
 
     ProductShop,
+  },
+
+  data() {
+    return {
+      update: '',
+    };
+  },
+
+  methods: {
+    updateCart(data) {
+      this.update = data;
+    },
   },
 
 };
