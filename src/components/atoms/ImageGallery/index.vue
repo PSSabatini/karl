@@ -54,6 +54,7 @@ export default {
 
 <style lang="scss">
 .image-gallery {
+  width: 100%;
 
   .main-image {
 

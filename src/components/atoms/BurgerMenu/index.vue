@@ -205,6 +205,8 @@ export default {
     bottom: 0;
     background-color: rgba($color: $white, $alpha: 0);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
 
     @include bp-small {
       top: 71px;
