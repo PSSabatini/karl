@@ -156,7 +156,7 @@ export default {
   padding-bottom: 20px;
 
   @include bp-small {
-    padding-top: 50px;
+    padding-top: 90px;
   }
 
   .image-container {
