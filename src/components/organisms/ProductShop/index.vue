@@ -135,6 +135,7 @@ export default {
 .product-shop {
   position: relative;
   padding-top: 80px;
+  padding-bottom: 20px;
 
   @include bp-small {
     padding-top: 50px;

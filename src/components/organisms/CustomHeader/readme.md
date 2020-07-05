@@ -9,3 +9,4 @@ Fixed Header with menu
 
 ### Used Components
   - [BurgerMenu](/story/atoms-burgermenu--default)
+  - [ButtonWithIcon](/story/molecules-buttonwithicon--default)

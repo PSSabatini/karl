@@ -33,9 +33,9 @@ import ArticleBlock from '@/components/atoms/ArticleBlock/index.vue';
 import ContentBlock from '@/components/atoms/ContentBlock/index.vue';
 import Stage from '@/components/atoms/Stage/index.vue';
 
-import CustomHeader from '@/components/molecules/CustomHeader/index.vue';
 import ProductInfo from '@/components/molecules/ProductInfo/index.vue';
 
+import CustomHeader from '@/components/organisms/CustomHeader/index.vue';
 import ProductShop from '@/components/organisms/ProductShop/index.vue';
 
 export default {
@@ -46,9 +46,9 @@ export default {
     ContentBlock,
     Stage,
 
-    CustomHeader,
     ProductInfo,
 
+    CustomHeader,
     ProductShop,
   },
 

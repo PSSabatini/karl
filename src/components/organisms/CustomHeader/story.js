@@ -7,9 +7,9 @@ import CustomHeader from './index.vue';
 // module readme
 import readme from './readme.md';
 
-let githistory = process.env.historyfile['src-components-molecules-CustomHeader-index-vue'];
+let githistory = process.env.historyfile['src-components-organisms-CustomHeader-index-vue'];
 
-storiesOf('molecules/CustomHeader', module)
+storiesOf('organisms/CustomHeader', module)
   .add('default', () => ({
     components: { CustomHeader },
     props: {

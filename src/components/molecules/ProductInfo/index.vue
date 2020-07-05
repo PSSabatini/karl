@@ -53,11 +53,7 @@ export default {
     line-height: 34px;
   }
 
-  margin-top: 30px;
-
-  @include bp-small {
-    margin-top: 10px;
-  }
+  margin-top: 50px;
 
   .product-description {
     margin-bottom: 20px;
