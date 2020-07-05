@@ -127,6 +127,7 @@ export default {
     },
 
     addCart() {
+    // error handling example
       if (this.amount !== 0 && this.productType !== '') {
         this.errorMessage = '';
         const cartInfo = {
@@ -134,15 +135,12 @@ export default {
           productType: this.productType,
         };
         this.$emit('cartInfo', cartInfo);
+      } else if (this.amount === 0 && this.productType === '') {
+        this.errorMessage = 'Please, select the product and quantity.';
+      } else if (this.productType === '') {
+        this.errorMessage = 'Please, select the product';
       } else {
-        // eslint-disable-next-line
-        if (this.amount === 0 && this.productType === '') {
-          this.errorMessage = 'Please, select the product and quantity.';
-        } else if (this.productType === '') {
-          this.errorMessage = 'Please, select the product';
-        } else {
-          this.errorMessage = 'Please, select the quantity';
-        }
+        this.errorMessage = 'Please, select the quantity';
       }
     },
   },
