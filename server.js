@@ -4,10 +4,21 @@ const path = require('path');
 const serveStatic = require('serve-static');
 const app = express();
 
-// eslint-disable-next-line prefer-template
-app.use(serveStatic(__dirname + "/dist"));
+const basicAuth = require('express-basic-auth')
 
-const port = process.env.PORT || 8080;
+app.use(basicAuth({
+  users: { 'karl': 'melitta' },
+  challenge: true,
+  realm: 'foo',
+}));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/dist');
+});
+
+app.use(serveStatic(__dirname + '/dist'));
+
+const port = process.env.PORT || 8081;
 
 app.listen(port);
 
