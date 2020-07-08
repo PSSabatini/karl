@@ -13,12 +13,12 @@ app.use(basicAuth({
 }));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/dist');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.use(serveStatic(__dirname + '/dist'));
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 
 app.listen(port);
 
